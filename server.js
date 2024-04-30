@@ -102,11 +102,15 @@ app.get('/gold-rate/:currency', async (req, res) => {
   }
 });
 
+app.get('/', (req,res) => {
+  res.send("server is running")
+})
 // Start the server
 async function startServer() {
   app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
   });
+
 }
 
 startServer();
